@@ -25,7 +25,7 @@ const incrementView = async (slug: string) => {
   INSERT INTO blog_views (slug, count)
   VALUES (${slug}, 1)
   ON CONFLICT (slug) 
-  DO UPDATE SET count = views.count + 1;
+  DO UPDATE SET count = blog_views.count + 1;
   `;
 };
 
